@@ -12,7 +12,13 @@ var CallBackGetSuccess = function(data){
 
     // $("#TempMin").append(floatTempMin)
     // $("#TempMax").append(floatTempMax)
-    // $("#Temp").append(floatTemp)
+    $("#Temp").prepend(floatTemp)
+
+    if (floatTemp < 10) {
+        $("#Temp").prepend(`<span class="iconify" data-icon="bi:thermometer-snow"></span>&ensp;`)
+    } else {
+        $("#Temp").prepend(`<span class="iconify" data-icon="bi:thermometer-sun"></span>&ensp;`)
+    }
 }
 
 var strApiKey = "23b8f9bcd8218afa0cecd672a2b8a198"

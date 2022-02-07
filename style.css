@@ -14,6 +14,7 @@ body {
     margin: auto;
     border-radius: 10px;
     box-shadow: rgba(254, 254, 255, 0.2) 0px 7px 29px 0px;
+    overflow: hidden;
 }
 
 #Head {
@@ -27,11 +28,52 @@ body {
     font-size: 3em;
 }
 
+.TempSVG {
+    height: 100px;
+}
+
 #mountains {
+    transform: translateY(33%);
+    z-index: 0;
+}
+
+#mountains .mountain1 {
+    position: absolute;
     background-color: #252547;
     height: 400px;
-    width: 100px;
-    overflow: hidden;
+    width: 600px;
+    transform: rotate(44deg);
+    top: 200px;
+    left: -150px;
+}
+
+#mountains .mountain2 {
+    position: absolute;
+    background-color: #252547;
+    height: 400px;
+    width: 600px;
+    transform: rotate(46deg);
+    top: 260px;
+    left: -30px;
+}
+
+#mountains .mountain3 {
+    position: absolute;
+    background-color: #252547;
+    height: 400px;
+    width: 600px;
+    transform: rotate(45deg);
+    top: 240px;
+    left: 80px;
+}
+
+.Snow {
+    width: 0; 
+  height: 0; 
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  
+  border-left: 60px solid white;
 }
 
 .sun {
@@ -242,6 +284,16 @@ body {
     #Meteo {
         width: 500px;
     }
+
+    #mountains .mountain2 {
+        top: 272px;
+        left: 12px;
+    }
+
+    #mountains .mountain3 {
+        top: 225px;
+        left: 156px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -254,6 +306,27 @@ body {
         height: 100px;
         width: 100px;
     }
+
+    #mountains .mountain1 {
+        top: 300px;
+    }
+
+    #mountains .mountain2 {
+        top: 387px;
+        left: 52px;
+    }
+
+    #mountains .mountain3 {
+        top: 330px;
+        left: 282px;
+    }
+
+    .Snow {
+      border-top: 80px solid transparent;
+      border-bottom: 80px solid transparent;
+      
+      border-left: 80px solid white;
+      }
 }
 
 @media screen and (min-width: 1200px) {
