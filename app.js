@@ -15,7 +15,7 @@ var CallBackGetSuccess = function(data){
     // $("#Temp").append(floatTemp)
 }
 
-var strApiKey = ""
+var strApiKey = "23b8f9bcd8218afa0cecd672a2b8a198"
 var strVille = "Colmar,fr"
 var strUrl = "https://api.openweathermap.org/data/2.5/weather?q="+ strVille +"&appid=" + strApiKey
 
@@ -30,5 +30,5 @@ if (strApiKey !== "") {
     .always(function(){
         //alert("finished")
     });
-    
+
 }
