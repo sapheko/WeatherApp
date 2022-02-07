@@ -20,11 +20,10 @@ body {
 #Head {
     text-align: center;
     padding-top: 10%;
+    
 }
 
 #Head h2 {
-    text-align: end;
-    margin-right: 20%;
     font-size: 3em;
 }
 
@@ -80,6 +79,7 @@ body {
 	width: 75px;
 	height: 75px;
     margin-left: 10%;
+    margin-top: 5%;
     position: absolute;
 	background-color: #FFDE00;
 	border-radius: 50%;
@@ -267,10 +267,23 @@ body {
 	top: -90px;
 }
 
+.petit {
+    margin-left: -10%;
+    margin-top: 2%;
+    position: absolute;
+    transform: scale(0.25);
+}
+
 @media screen and (max-width: 600px) {
     #background-wrap {
         margin-top: 40%;
         z-index: 0;
+    }
+}
+
+@media screen and (max-width:650px) {
+    #Head {
+        margin-top: 10%;
     }
 }
 
@@ -326,7 +339,12 @@ body {
       border-bottom: 80px solid transparent;
       
       border-left: 80px solid white;
-      }
+    }
+
+    .petit {
+        margin-top: 6%;
+        transform: scale(0.35);
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -338,5 +356,16 @@ body {
     .sun {
         margin-left: 5%;
         margin-top: 2%;
+    }
+
+    .petit {
+        margin-top: 3%;
+        margin-left: -2%;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .petit {
+        margin-left: 1%;
     }
 }
