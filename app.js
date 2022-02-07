@@ -15,16 +15,20 @@ var CallBackGetSuccess = function(data){
     // $("#Temp").append(floatTemp)
 }
 
-var strApiKey = "23b8f9bcd8218afa0cecd672a2b8a198"
+var strApiKey = ""
 var strVille = "Colmar,fr"
 var strUrl = "https://api.openweathermap.org/data/2.5/weather?q="+ strVille +"&appid=" + strApiKey
 
-$.get(strUrl, CallBackGetSuccess).done(function() {
-    //alert("second success")
-})
-.fail(function (){
-    alert("error")
-})
-.always(function(){
-    //alert("finished")
-});
+if (strApiKey !== "") {
+
+    $.get(strUrl, CallBackGetSuccess).done(function() {
+        //alert("second success")
+    })
+    .fail(function (){
+        alert("error")
+    })
+    .always(function(){
+        //alert("finished")
+    });
+    
+}
