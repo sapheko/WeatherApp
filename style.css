@@ -345,6 +345,14 @@ body {
         margin-top: 6%;
         transform: scale(0.35);
     }
+
+    .circle {
+        position: absolute;
+        border: solid 1px #ccc;
+        width: 30px; 
+        height: 30px; 
+        border-radius: 50%;  
+    }
 }
 
 @media screen and (min-width: 1200px) {
