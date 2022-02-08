@@ -1,16 +1,12 @@
-$(document).ready(function(){
-
-})
-
 var CallBackGetSuccess = function(data){
     console.log("Donnée API", data)
-    console.log("Meteo temp", (data.main.temp - 273.15).toFixed(2))
 
     var floatTemp = (data.main.temp - 273.15).toFixed(2)
     var strWeather = data.weather[0].main
 
     // $("#TempMin").append(floatTempMin)
     // $("#TempMax").append(floatTempMax)
+
     $("#Temp").prepend(floatTemp)
 
     if (floatTemp < 10) {
@@ -24,6 +20,8 @@ var CallBackGetSuccess = function(data){
     } else if (strWeather == "Sun" || strWeather == "Clear") {
         $('.petit').hide()
         $('#background-wrap').hide()
+    } else if (strWeather == "rain") {
+        $('#Meteo').addClass('weather rain')
     }
 }
 
