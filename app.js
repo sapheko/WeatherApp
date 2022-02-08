@@ -7,8 +7,7 @@ var CallBackGetSuccess = function(data){
     console.log("Meteo temp", (data.main.temp - 273.15).toFixed(2))
 
     var floatTemp = (data.main.temp - 273.15).toFixed(2)
-    var floatTempMin = (data.main.temp_min - 273.15).toFixed(2)
-    var floatTempMax = (data.main.temp_max - 273.15).toFixed(2)
+    var strWeather = data.weather[0].main
 
     // $("#TempMin").append(floatTempMin)
     // $("#TempMax").append(floatTempMax)
@@ -18,6 +17,13 @@ var CallBackGetSuccess = function(data){
         $("#Temp").prepend(`<span class="iconify" data-icon="bi:thermometer-snow"></span>&ensp;`)
     } else {
         $("#Temp").prepend(`<span class="iconify" data-icon="bi:thermometer-sun"></span>&ensp;`)
+    }
+
+    if (strWeather == "Clouds") {
+        $('.sun').hide()
+    } else if (strWeather == "Sun" || strWeather == "Clear") {
+        $('.petit').hide()
+        $('#background-wrap').hide()
     }
 }
 
